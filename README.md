@@ -63,6 +63,7 @@ This repo contains starter code (with some CSS formatting and the file structure
 ```
 git clone https://github.com/kristenkoyanagi/intro-to-react
 cd intro-to-react
-yarn install
-yarn run start
+cd my-starter-app #or my-finished-app
+yarn install 
+yarn start
 ```
