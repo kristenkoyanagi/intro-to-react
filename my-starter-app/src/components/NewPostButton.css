@@ -1,0 +1,10 @@
+.newPostButton {
+    background-color: #008140;
+    padding: 20px 20px;
+    height: 100px;
+    color: white; 
+    border-radius: 12px;
+    display: block;
+    line-height: 0px;
+    font-size: 16px;
+}

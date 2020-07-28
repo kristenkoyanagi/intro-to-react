@@ -49,7 +49,8 @@ cd my-app
 npm start
 ```
 
-[npm](https://www.npmjs.com/) is the node package manager that helps you install dependencies, test, run, and build your app
+[npm](https://www.npmjs.com/) and [yarn](https://yarnpkg.com/) are separate node package managers that helps you install dependencies, test, run, and build your app. You can use either one as long as you stick with one.
+
 
 ### Check your start app
 
@@ -57,11 +58,11 @@ If you open [http://localhost:3000](http://localhost:3000), you should see the s
 
 ## React Demo
 
-This repo contains the finished code from the code-along. Take a peak or try running it locally by running a few commands below. 
+This repo contains starter code (with some CSS formatting and the file structure) and the finished code from the demo. Take a peek or try running it locally by running a few commands below. 
 
 ```
 git clone https://github.com/kristenkoyanagi/intro-to-react
 cd intro-to-react
-npm install
-npm run start
+yarn install
+yarn run start
 ```
