@@ -26,10 +26,9 @@ class Feed extends Component {
             ],
             nextImageId: 30
         }
-        this.createNewPost = this.createNewPost.bind(this)
     }
 
-    createNewPost() {
+    createNewPost = () => {
         const newPosts = [
             {
                 username: 'new user',
