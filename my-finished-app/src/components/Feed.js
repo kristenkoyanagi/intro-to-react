@@ -26,15 +26,16 @@ function Feed() {
 
     const handleCreateNewPost = event => {
         console.log(event)
-        setPosts([...posts, { username: username, imageId: imageId, caption: "random" }]);
+        setPosts([{ username: username, imageId: imageId, caption: "my caption" }, ...posts]);
         setImageId(imageId+10)
+        setUsername("")
         console.log(posts, imageId)
     };
 
     return(
         <div className="feed">
-            <label htmlFor="usernameInput">Username</label>
-            <input className="usernameInput" id="usernameInput" onChange={event => setUsername(event.target.value)}></input>
+            <label htmlFor="usernameInput">Username:</label>
+            <input className="usernameInput" id="usernameInput" onChange={event => setUsername(event.target.value)} value={username}></input>
             <button className="newPostButton" onClick={handleCreateNewPost}>New Post</button>
             {posts.map((post,k) => {
                 return <Post imageId={post.imageId} username={post.username} caption={post.caption} key={k}/>
