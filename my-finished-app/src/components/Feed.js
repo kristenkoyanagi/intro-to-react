@@ -1,61 +1,47 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './Feed.css';
 import Post from './Post';
-import NewPostButton from './NewPostButton';
 
-class Feed extends Component { 
-    constructor(props){
-        super(props)
-        this.state = {
-            posts: [
-                {
-                    username: 'kristen',
-                    imageId: 0,
-                    caption: 'my first picture'
-                },
-                {
-                    username: 'beverly',
-                    imageId: 10,
-                    caption: 'my second picture' 
-                },
-                {
-                    username: 'bori',
-                    imageId: 20,
-                    caption: 'my third picture'
-                }
-            ],
-            nextImageId: 30
+function Feed() { 
+    const postList = [
+        {
+            username: 'kristen',
+            imageId: 0,
+            caption: 'my first picture'
+        },
+        {
+            username: 'beverly',
+            imageId: 10,
+            caption: 'my second picture' 
+        },
+        {
+            username: 'bori',
+            imageId: 20,
+            caption: 'my third picture'
         }
-    }
+    ]
+    const [posts,setPosts] = useState(postList)
+    const [imageId,setImageId] = useState(30)
+    const [username,setUsername] = useState("")
 
-    createNewPost = () => {
-        const newPosts = [
-            {
-                username: 'new user',
-                imageId: this.state.nextImageId,
-                caption: 'new caption'
-            }, ...this.state.posts
-        ]
-        this.setState({
-            posts: newPosts,
-            nextImageId: this.state.nextImageId + 10
-        })
-    }
+    const handleCreateNewPost = event => {
+        console.log(event)
+        setPosts([{ username: username, imageId: imageId, caption: "my caption" }, ...posts]);
+        setImageId(imageId+10)
+        setUsername("")
+        console.log(posts, imageId)
+    };
 
-    createPosts() {
-        return this.state.posts.map(post => {
-            return <Post imageId={post.imageId} username={post.username} caption={post.caption}></Post>
-        })
-    }
-
-    render(){
-        return(
-            <div className="feed">
-                <NewPostButton createNewPost={this.createNewPost}></NewPostButton>
-                {this.createPosts()}
-            </div>
-        )
-    }
+    return(
+        <div className="feed">
+            <label htmlFor="usernameInput">Username:</label>
+            <input className="usernameInput" id="usernameInput" onChange={event => setUsername(event.target.value)} value={username}></input>
+            <button className="newPostButton" onClick={handleCreateNewPost}>New Post</button>
+            {posts.map((post,k) => {
+                return <Post imageId={post.imageId} username={post.username} caption={post.caption} key={k}/>
+            })}
+        </div>
+    )
 }
 
 export default Feed;

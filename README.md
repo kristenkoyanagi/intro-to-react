@@ -9,10 +9,10 @@
 To install or update nvm, run the install script for nvm located [here](https://github.com/nvm-sh/nvm/blob/v0.35.3/install.sh) or using the following commands. 
 
 ```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 ```
 ```
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 ```
 
 If you have troubleshooting issues, check out the [github repo](https://github.com/nvm-sh/nvm#troubleshooting-on-linux) for nvm.

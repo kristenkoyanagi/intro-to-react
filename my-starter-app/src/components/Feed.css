@@ -9,3 +9,26 @@
     flex-direction: column;
     align-items: center;
 }
+
+.newPostButton {
+    background-color: #008140;
+    padding: 20px 20px;
+    height: 10px;
+    color: white; 
+    border-radius: 12px;
+    display: block;
+    line-height: 0px;
+    font-size: 16px;
+}
+
+label {
+    font-size: 16px;
+}
+
+
+#usernameInput {
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
